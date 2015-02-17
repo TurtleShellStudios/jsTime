@@ -24,4 +24,12 @@ describe("Timer Specifications", function() {
 		});
 	});
 
+	describe("Running the timer", function() {
+		it("Time after 5 seconds will be 5", function() {
+			timer.start()
+			setTimeout(function() {timer.stop();}, 5000);
+			expect(timer.elapsedTime).toBe(5);
+		});
+	});
+
 });
