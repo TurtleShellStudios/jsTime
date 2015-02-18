@@ -2,10 +2,9 @@ function Task(pTaskName,pEstHours) {
     this.taskName = pTaskName;
     this.estHours = pEstHours;
     this.actHours = 0;
-    this.taskType = this.type_enum['NONE'];
     this.user = null;
     this.rateMult = 1;
-
+    
     this.type_enum = {
         BUG : "Bug",
         ENHANCEMENT : "Enhancement",
@@ -13,6 +12,8 @@ function Task(pTaskName,pEstHours) {
         DESIGN : "Design",
         NONE : ""
     };
+
+    this.taskType = this.type_enum['NONE'];
 
     this.setEstHours = function (pEstHours) {
         this.estHours = pEstHours;
@@ -37,4 +38,4 @@ function Task(pTaskName,pEstHours) {
     this.setRateMult = function (pRateMult) {
         this.rateMult = pRateMult;
     };
-};
+}

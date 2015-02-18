@@ -1,13 +1,16 @@
 describe("Task Specifications", function () {
     var task, user1, user2;
+
     beforeEach(function (){
         task = new Task("Issue 1",10800);
         user1 = new User("Bob",15.38,"Dev");
         user2 = new User("Jane",14.00,"QA");
+        console.log(task);
     });
 
     describe("Task initialized", function () {
         it ("Task's name is 'Issue 1'", function () {
+            console.log(task);
             expect(task.taskName).toBe("Issue 1");
         });
 
@@ -25,7 +28,7 @@ describe("Task Specifications", function () {
             expect(task.taskType).toBe(task.type_enum['NONE']);
         });
         it ("Task's type changed to 'Bug'", function () {
-            task.setType(task.type_enum['BUG']);
+            task.setTaskType(task.type_enum['BUG']);
             expect(task.taskType).toBe("Bug");
         });
     });
