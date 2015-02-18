@@ -8,7 +8,7 @@ describe("Task Specifications", function () {
 
     describe("Task initialized", function () {
         it ("Task's name is 'Issue 1'", function () {
-            expect(task.name).toBe("Issue 1");
+            expect(task.taskName).toBe("Issue 1");
         });
 
         it ("Task's estimated time is 3 hours (10800 s)", function () {
@@ -22,11 +22,11 @@ describe("Task Specifications", function () {
 
     describe("Types Added, Changed", function () {
         it ("Task's type initialized to none", function () {
-            expect(task.type).toBe(task.type_enum['NONE']);
+            expect(task.taskType).toBe(task.type_enum['NONE']);
         });
         it ("Task's type changed to 'Bug'", function () {
             task.setType(task.type_enum['BUG']);
-            expect(task.type).toBe("Bug");
+            expect(task.taskType).toBe("Bug");
         });
     });
 

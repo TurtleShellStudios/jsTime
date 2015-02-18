@@ -1,8 +1,8 @@
-function Task(name,estHours) {
-    this.name = name;
+function Task(taskName,estHours) {
+    this.taskName = taskName;
     this.estHours = estHours;
     this.actHours = 0;
-    this.type = this.type_enum['NONE'];
+    this.taskType = this.type_enum['NONE'];
     this.user = null;
     this.rateMult = 1;
 
@@ -10,8 +10,8 @@ function Task(name,estHours) {
         BUG : "Bug",
         ENHANCEMENT : "Enhancement",
         TESTING : "Testing",
-        DESIGN : "Design";
-        NONE : "";
+        DESIGN : "Design",
+        NONE : ""
     };
 
     this.setEstHours = function (estHours) {
@@ -26,8 +26,8 @@ function Task(name,estHours) {
         this.actHours += actHours;
     };
 
-    this.setType = function (type) {
-        this.type = type;
+    this.setTaskType = function (taskType) {
+        this.taskType = taskType;
     };
 
     this.setUser = function (user) {
