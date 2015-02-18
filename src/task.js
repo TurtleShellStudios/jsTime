@@ -1,6 +1,6 @@
-function Task(taskName,estHours) {
-    this.taskName = taskName;
-    this.estHours = estHours;
+function Task(pTaskName,pEstHours) {
+    this.taskName = pTaskName;
+    this.estHours = pEstHours;
     this.actHours = 0;
     this.taskType = this.type_enum['NONE'];
     this.user = null;
@@ -14,20 +14,20 @@ function Task(taskName,estHours) {
         NONE : ""
     };
 
-    this.setEstHours = function (estHours) {
-        this.estHours = estHours;
+    this.setEstHours = function (pEstHours) {
+        this.estHours = pEstHours;
     };
 
-    this.setActHours = function (actHours) {
-        this.actHours = actHours;
+    this.setActHours = function (pActHours) {
+        this.actHours = pActHours;
     };
 
-    this.addActHours = function (actHours) {
-        this.actHours += actHours;
+    this.addActHours = function (pActHours) {
+        this.actHours += pActHours;
     };
 
-    this.setTaskType = function (taskType) {
-        this.taskType = taskType;
+    this.setTaskType = function (pTaskType) {
+        this.taskType = pTaskType;
     };
 
     this.setUser = function (user) {
