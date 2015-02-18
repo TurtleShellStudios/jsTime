@@ -1,9 +1,9 @@
 describe("Task Specifications", function () {
-    
+    var task, user1, user2;
     beforeEach(function (){
-        var task = Task.init("Issue 1",10800);
-        var user1 = User.init("Bob",15.38,"Dev");
-        var user2 = User.init("Jane",14.00,"QA");
+        task = Task.init("Issue 1",10800);
+        user1 = User.init("Bob",15.38,"Dev");
+        user2 = User.init("Jane",14.00,"QA");
     });
 
     describe("Task initialized", function () {
