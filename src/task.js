@@ -30,11 +30,11 @@ function Task(pTaskName,pEstHours) {
         this.taskType = pTaskType;
     };
 
-    this.setUser = function (user) {
-        this.user = user;
+    this.setUser = function (pUser) {
+        this.user = pUser;
     };
 
-    this.setRateMult = function (rateMult) {
-        this.rateMult = rateMult;
+    this.setRateMult = function (pRateMult) {
+        this.rateMult = pRateMult;
     };
 };
