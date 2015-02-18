@@ -21,11 +21,11 @@ describe("Task Specifications", function () {
     });
 
     describe("Types Added, Changed", function () {
-        it ("Task's type initialized to null", function () {
-            expect(task.type).toBe(null);
+        it ("Task's type initialized to none", function () {
+            expect(task.type).toBe(task.type_enum['NONE']);
         });
         it ("Task's type changed to 'Bug'", function () {
-            task.setType("Bug");
+            task.setType(task.type_enum['BUG']);
             expect(task.type).toBe("Bug");
         });
     });

@@ -2,7 +2,7 @@ function Task(name,estHours) {
     this.name = name;
     this.estHours = estHours;
     this.actHours = 0;
-    this.type = this.type_enum.NONE;
+    this.type = this.type_enum['NONE'];
     this.user = null;
     this.rateMult = 1;
 
