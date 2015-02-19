@@ -1,12 +1,13 @@
 describe("Timer Specifications", function() {
+	var timer;
 
 	beforeEach(function() {
-		var timer = Timer.init()
+		timer = new Timer()
 	});
 
 	describe("Initialize Tests", function() {
 		it("Timer initialized to 0", function() {
-			expect(timer.elapsedTime()).toBe(0);
+			expect(timer.elapsedTime).toBe(0);
 		});
 		it("Timer initialized as stopped", function() {
 			expect(timer.isStarted).toBe(false);
@@ -27,10 +28,10 @@ describe("Timer Specifications", function() {
 	describe("Running the timer", function() {
 		it("Time after 5 seconds will be 5", function() {
 			timer.start()
-			setTimeout(function() {
-				timer.stop();
-				expect(timer.elapsedTime).toBe(5);
-			}, 5000);
+			var startTime = new Date().getTime()
+			while((((new Date().getTime()) - startTime) / 1000) < 5);
+			timer.stop()
+			expect(timer.elapsedTime).toBe(5);
 		});
 	});
 

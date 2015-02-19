@@ -5,12 +5,10 @@ describe("Task Specifications", function () {
         task = new Task("Issue 1",10800);
         user1 = new User("Bob",15.38,"Dev");
         user2 = new User("Jane",14.00,"QA");
-        console.log(task);
     });
 
     describe("Task initialized", function () {
         it ("Task's name is 'Issue 1'", function () {
-            console.log(task);
             expect(task.taskName).toBe("Issue 1");
         });
 
