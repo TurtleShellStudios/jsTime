@@ -1,23 +1,28 @@
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
 		<div class="container">
 			<section class="timer">
 				<h1 id="time">00:00:00</h1>	
+				<button id="startstop" type="button">Start</button>
 			</section>
 			<section class="assoc-task">
-				
+				<p id="taskName">Task Name: </p>
+				<p id="taskType">Task Type: </p>
+				<p id="estHours">Estimated Hours: </p>
 			</section>
 			<section class="user">
-
+				<p id="username">User: </p>
+				<p id="role">Role: </p>
+				<p id="payRate">Pay Rate: </p>
+				<p id="taskCost">Task Cost: </p>
 			</section>
-			<button id="start" type="button">Start</button>
-			<button id="stop" type="button">Stop</button>
 		</div>
 		<script src="src/timer.js" type="text/javascript"></script>
 		<script src="src/user.js" type="text/javascript"></script>
 		<script src="src/task.js" type="text/javascript"></script>
+		<script src="src/main.js" type="text/javascript"></script>
 	</body>
 </html>
