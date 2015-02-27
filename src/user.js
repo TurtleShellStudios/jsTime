@@ -1,4 +1,4 @@
-function User(name, rate, role) {
+var user = function (name, rate, role) {
 	
 	this.username = name;
 	this.payRate = rate;
@@ -20,4 +20,4 @@ function User(name, rate, role) {
 	this.addHoursWorked = function(hours) {
 		this.hoursWorked += hours;
 	};
-}
+};
