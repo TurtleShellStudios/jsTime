@@ -6,6 +6,8 @@ var assignedUser = new user("armandm", 19.00, "Dev");
 var assocTask = new task("Fix all that junk!!", 7200);
 assocTask.setTaskType(assocTask.type_enum['BUG']);
 
+document.body.style.backgroundColor = 'green';
+
 document.getElementById('taskNameLabel').innerHTML = assocTask.taskName;
 document.getElementById('taskTypeLabel').innerHTML = assocTask.taskType;
 document.getElementById('taskHoursLabel').innerHTML = (assocTask.estHours/3600);
@@ -22,6 +24,9 @@ document.getElementById('startstop').addEventListener('click', function()
 		startTimer.start();
 		timerID = window.setInterval(function() {
 				var time = Math.floor(((new Date().getTime()) - startTimer.startTime) / 1000);
+				if(time > assocTask.estHours) {
+					document.body.style.backgroundColor = 'red';
+				}
 				console.log(time);
 				var seconds = (startTimer.elapsedTime + time) % 60;
 				var minutes = Math.floor((time / 60) % 60);
