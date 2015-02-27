@@ -2,7 +2,7 @@ describe("User Specifications | ", function() {
 	var user;
 
 	beforeEach(function() {
-		user = new User("Bob", 17.32, "Dev");
+		user = new user("Bob", 17.32, "Dev");
 	});
 
 	describe("Initalized user Bob | ", function() {

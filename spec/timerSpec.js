@@ -2,7 +2,7 @@ describe("Timer Specifications", function() {
 	var timer;
 
 	beforeEach(function() {
-		timer = new Timer()
+		timer = new timer();
 	});
 
 	describe("Initialize Tests", function() {

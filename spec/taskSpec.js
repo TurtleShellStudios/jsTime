@@ -2,9 +2,9 @@ describe("Task Specifications", function () {
     var task, user1, user2;
 
     beforeEach(function (){
-        task = new Task("Issue 1",10800);
-        user1 = new User("Bob",15.38,"Dev");
-        user2 = new User("Jane",14.00,"QA");
+        task = new task("Issue 1", 10800);
+        user1 = new user("Bob",15.38,"Dev");
+        user2 = new user("Jane",14.00,"QA");
     });
 
     describe("Task initialized", function () {
