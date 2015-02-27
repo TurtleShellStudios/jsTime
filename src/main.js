@@ -2,6 +2,19 @@ var timerID;
 var prevTime = 0;
 
 var startTimer = new timer();
+var assignedUser = new user("armandm", 19.00, "Dev");
+var assocTask = new task("Fix all that junk!!", 7200);
+assocTask.setTaskType(assocTask.type_enum['BUG']);
+
+document.getElementById('taskNameLabel').innerHTML = assocTask.taskName;
+document.getElementById('taskTypeLabel').innerHTML = assocTask.taskType;
+document.getElementById('taskHoursLabel').innerHTML = (assocTask.estHours/3600);
+
+document.getElementById('username').innerHTML = "User: " + assignedUser.username;
+document.getElementById('role').innerHTML = "Role: " + assignedUser.role;
+document.getElementById('payRate').innerHTML = "Pay Rate: $" + assignedUser.payRate + "/hr";
+document.getElementById('taskCost').innerHTML = "Task Cost: $" + (assignedUser.payRate * assocTask.estHours / 3600);
+
 document.getElementById('startstop').addEventListener('click', function() 
 {
 	if(!startTimer.isStarted)
@@ -23,7 +36,7 @@ document.getElementById('startstop').addEventListener('click', function()
 	else
 	{
 		clearInterval(timerID);
-		document.getElementById('startstop').innerHTML = 'Start';	
+		document.getElementById('startstop').innerHTML = 'Start';
 		startTimer.isStarted = false;
 	}
 });
