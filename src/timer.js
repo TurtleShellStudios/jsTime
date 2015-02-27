@@ -1,4 +1,4 @@
-var timer = function () {
+function timer() {
 	this.elapsedTime = 0;
 	this.periodTime = 0;
 	this.isStarted = false;

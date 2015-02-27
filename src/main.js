@@ -30,7 +30,7 @@ document.getElementById('startstop').addEventListener('click', function()
 				console.log(time);
 				var seconds = (startTimer.elapsedTime + time) % 60;
 				var minutes = Math.floor((time / 60) % 60);
-				var hours = Math.floor((time / 60) / 60);
+				var hours   = Math.floor((time / 60) / 60);
 				var sString = seconds < 10 ? "0" + seconds.toString() : seconds.toString();
 				var mString = minutes < 10 ? "0" + minutes.toString() : minutes.toString();
 				var hString = hours < 10 ? "0" + hours.toString() : hours.toString();

@@ -1,4 +1,4 @@
-var user = function (name, rate, role) {
+function user(name, rate, role) {
 	
 	this.username = name;
 	this.payRate = rate;

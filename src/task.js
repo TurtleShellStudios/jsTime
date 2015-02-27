@@ -1,4 +1,4 @@
-var task = function (pTaskName, pEstHours) {
+function task(pTaskName, pEstHours) {
     this.taskName = pTaskName;
     this.estHours = pEstHours;
     this.actHours = 0;
